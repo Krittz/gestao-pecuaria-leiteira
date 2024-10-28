@@ -19,7 +19,7 @@
                         <span>Dashboard</span>
                     </a>
                     <a href="{{ route('animals.index') }}" class="sidebar-link">
-                        <ion-icon name="albums-outline"></ion-icon>
+                        <ion-icon name="fish-outline"></ion-icon>
                         <span>Animais</span>
                     </a>
                 </div>
@@ -41,7 +41,7 @@
 
 
             <button class="sidebar-link">
-                <i class="ri-logout-box-r-fill"></i>
+                <ion-icon name="power-outline" style="color: red;"></ion-icon>
                 <span>Log Out</span>
             </button>
         </div>

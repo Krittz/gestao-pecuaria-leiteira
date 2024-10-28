@@ -3,25 +3,28 @@
 @section('title', 'Animais')
 
 @section('content')
-<h1>Animais</h1>
+@section('section-title', 'Animais')
 
 @if (session('success'))
 <div>
     {{ session('success') }}
 </div>
 @endif
+<div class="table-action">
+    <a href="{{ route('animals.create') }}"><ion-icon name="add-outline"></ion-icon> Novo Animal</a>
+</div>
 
-<table border="1">
+<table class="table">
     <thead>
         <tr>
             <th>ID</th>
             <th>Nome</th>
-            <th>Imagem</th>
             <th>Sexo</th>
             <th>Nascimento</th>
             <th>Prenhez</th>
             <th>Mãe</th>
             <th>Pai</th>
+            <th>Imagem</th>
             <th>Ações</th>
         </tr>
     </thead>
@@ -30,20 +33,21 @@
         <tr>
             <td>{{ $animal->id }}</td>
             <td>{{ $animal->nome }}</td>
-            <td>
-                @if ($animal->imagem)
-                <img src="{{ asset('storage/' . $animal->imagem) }}" alt="{{ $animal->nome }}" width="100">
-                @else
-                Sem imagem
-                @endif
-            </td>
+
             <td>{{ $animal->sexo }}</td>
             <td>{{ $animal->nascimento }}</td>
             <td>{{ $animal->prenhez ? 'Sim' : 'Não' }}</td>
             <td>{{ $animal->mae ? $animal->mae->nome : 'N/A' }}</td>
             <td>{{ $animal->pai ? $animal->pai->nome : 'N/A' }}</td>
+
+            <td style="justify-items: center;">
+                @if ($animal->imagem)
+                <img src="{{ asset('storage/' . $animal->imagem) }}" alt="{{ $animal->nome }}" width="100">
+                @else
+                N/A
+                @endif
+            </td>
             <td>
-                <!-- Aqui você pode adicionar links para editar ou deletar o animal -->
                 <a href="#">Editar</a>
                 <form action="#" method="POST" style="display:inline;">
                     @csrf
@@ -56,5 +60,4 @@
     </tbody>
 </table>
 
-<a href="{{ route('animals.create') }}">Cadastrar Novo Animal</a>
 @endsection

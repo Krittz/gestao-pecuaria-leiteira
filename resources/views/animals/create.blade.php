@@ -1,9 +1,12 @@
 @extends('app')
 
 @section('title', 'Cadastrar Animal')
+@section('section-title', 'Cadastrar Animal')
 
 @section('content')
-<h1>Cadastrar Animal</h1>
+
+
+
 
 @if ($errors->any())
 <div>
@@ -51,4 +54,6 @@
     <button type="submit">Cadastrar</button>
 
 </form>
+
+
 @endsection

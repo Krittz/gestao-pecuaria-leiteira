@@ -69,10 +69,12 @@ button {
 }
 
 .container {
+
     margin-inline: 1.5rem;
 }
 
 .main {
+
     padding-top: 5rem;
 }
 
@@ -115,9 +117,50 @@ button {
 }
 
 .header-toggle {
-    font-size: 1.5rem;
-    color: var(--title-color);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    transition: all .3s ease;
+}
+
+.header-toggle span {
+    content: "";
+    position: relative;
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--first-color);
+    transition: all .3s ease;
+}
+
+
+.header-toggle span:before,
+.header-toggle span:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 2px;
+    background: var(--first-color);
+    transition: all .3s ease;
+}
+
+.header-toggle span:before {
+    top: -7.5px;
+    width: 22px;
+}
+
+.header-toggle span:after {
+    bottom: -7.5px;
+    width: 25px;
+}
+
+
+.header-toggle:hover span:after,
+.header-toggle:hover span:before {
+    left: 30%;
 }
 
 .sidebar {
@@ -365,4 +408,183 @@ button {
     .left-pd {
         padding-left: 114px;
     }
+}
+
+.content::-webkit-scrollbar {
+    border-radius: 1rem;
+    height: 5px;
+    background: var(--body-color);
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: var(--shadow-color);
+    border-radius: 5rem;
+}
+
+.content {
+    overflow-x: scroll;
+    padding: 1rem;
+    height: calc(100vh - (calc(var(--header-height) + 5.6rem)));
+    width: 100%;
+    border-radius: 1rem;
+    background: var(--body-color);
+    box-shadow: 0 0 24px var(--shadow-color);
+}
+
+.section-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-header form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20rem;
+    height: 2.5rem;
+    background: var(--shadow-color);
+    border-radius: 1rem;
+    margin-inline-end: 1.5rem;
+    overflow: hidden;
+}
+
+.section-header form input {
+    width: 16rem;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    padding-inline: 1rem;
+    font-size: 1em;
+    color: var(--text-color);
+}
+
+.section-header form button {
+    width: 4rem;
+    background: var(--shadow-color);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    color: var(--first-color);
+    font-weight: 900;
+    font-size: 1.5em;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.section-header form button:hover {
+    background: var(--first-color);
+    color: var(--body-color);
+}
+
+.section-header .section-title {
+    width: fit-content;
+    position: relative;
+    margin: 1rem;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--first-color);
+    width: 100%;
+    height: 1px;
+}
+
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-radius: .5rem;
+    border-spacing: 0 1rem !important;
+}
+
+.table th {
+    padding-block: 1rem;
+    color: white;
+    background: transparent;
+}
+
+.table thead tr {
+    background: transparent;
+    box-shadow: 0 1px 0 var(--first-color);
+
+}
+
+.table thead tr th {
+    position: relative;
+    padding-inline: 1rem;
+}
+
+.table thead tr th:not(:last-of-type):after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    top: 25%;
+    right: 0;
+    height: 50%;
+    background: var(--first-color);
+    opacity: 10%;
+}
+
+.table tbody tr {
+    margin-inline: 1rem;
+    background: var(--shadow-color);
+}
+
+
+.table tbody td {
+    padding-block: 1.5rem;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table tbody td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.table tbody td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+
+.table-action {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.table-action a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--first-color);
+    padding-block: .5rem;
+    padding-inline: 1rem;
+    background: var(--shadow-color);
+    border-radius: .5rem;
+    transition: all .3s ease;
+    column-gap: .5rem;
+    font-weight: var(--font-semi-bold);
+}
+
+.table-action a:hover {
+    color: #000;
+    background: var(--first-color);
+}
+
+.table-action a ion-icon {
+    font-size: 1.5rem;
 }
