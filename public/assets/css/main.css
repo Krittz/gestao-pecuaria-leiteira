@@ -588,3 +588,205 @@ button {
 .table-action a ion-icon {
     font-size: 1.5rem;
 }
+
+.create-animal-form {
+    width: 35rem;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 1rem;
+
+}
+
+.form-group:not(.file) {
+    border-radius: .5rem;
+    width: 35rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+    position: relative;
+    background: hsl(240, 28.77%, 14.31%);
+    border: 1px solid hsla(240, 17%, 30%, 0.568);
+    overflow: hidden;
+    box-shadow: 0 2px 14px var(--shadow-color);
+}
+
+.form-group:not(.file) label {
+    position: absolute;
+    color: var(--text-color);
+    top: .5rem;
+    left: 2%;
+    transition: all .3s ease;
+    font-size: 1em;
+}
+
+.form-group:not(.file):focus-within label {
+    top: 0.1rem;
+    left: 1%;
+    font-size: .75em;
+}
+
+.form-group:not(.file) input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    padding-inline: 1rem;
+    padding-block: .5rem;
+    color: var(--text-color);
+    font-size: 1em;
+}
+
+.form-group.file input {
+    display: none;
+}
+
+.form-group.file label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 35rem;
+    height: 10rem;
+    color: var(--first-color);
+    font-size: 1em;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    background: var(--shadow-color);
+    border: 1px solid hsla(240, 17%, 30%, 0.568);
+    box-shadow: 0 2px 14px var(--shadow-color);
+}
+
+.form-group.file label ion-icon {
+    font-size: 5em;
+}
+
+.dropdown {
+    width: 35rem;
+    position: relative;
+    border: 1px solid hsla(240, 17%, 30%, 0.568);
+    box-shadow: 0 2px 14px var(--shadow-color);
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+}
+
+.dropdown * {
+    box-sizing: border-box;
+}
+
+.select {
+    padding-block: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: hsl(240, 28.77%, 14.31%);
+    cursor: pointer;
+    border-radius: .5rem;
+    padding-inline: 1rem;
+}
+
+.caret {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transition: .3s;
+}
+
+.caret-rotate {
+    transform: rotate(180deg);
+}
+
+.form-menu {
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: hsl(240, 28.77%, 14.31%);
+    border-radius: .5rem;
+    position: absolute;
+    left: 0;
+    top: 3.5rem;
+    width: 100%;
+    opacity: 0;
+    display: none;
+    z-index: 1;
+    transition: all .3s ease;
+}
+
+.form-menu li {
+    padding: 0.7em 0.5em;
+    margin: 0.3em 0;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.form-menu li:hover {
+    color: var(--first-color);
+    background: var(--shadow-color);
+}
+
+.form-menu .active {
+    color: var(--first-color);
+}
+
+.menu-open {
+    opacity: 1;
+    display: block;
+}
+
+
+::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+::-webkit-datetime-edit,
+::-webkit-datetime-edit-text {
+    color: var(--text-color);
+    font-family: var(--body-font);
+    display: inline-block;
+
+}
+
+.create-animal-form .buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+
+}
+
+.create-animal-form .buttons a,
+.create-animal-form .buttons button[type="submit"] {
+    width: 45%;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-size: var(--normal-font-size);
+    padding-block: .5rem;
+    border-radius: .5rem;
+    background: var(--shadow-color);
+    cursor: pointer;
+    transition: all .3s ease;
+    color: var(--text-color);
+    margin-top: 1rem;
+}
+
+.create-animal-form .buttons button[type="submit"] {
+    background: var(--first-color);
+    color: var(--body-color);
+    font-weight: var(--font-semi-bold);
+}
+
+.create-animal-form .buttons a:hover,
+.create-animal-form .buttons button[type="submit"]:hover {
+    transform: scale(1.05)
+}
