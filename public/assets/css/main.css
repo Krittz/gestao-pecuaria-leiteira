@@ -202,18 +202,14 @@ button {
     position: relative;
     width: 50px;
     height: 50px;
-    background: var(--first-color);
+    background: none;
     border-radius: 50%;
     overflow: hidden;
     display: grid;
     justify-items: center;
 }
 
-.sidebar-img img {
-    position: absolute;
-    width: 36px;
-    bottom: -1px;
-}
+
 
 .sidebar-info h3 {
     font-size: var(--normal-font-size);
@@ -541,9 +537,10 @@ button {
 
 
 .table tbody td {
-    padding-block: 1.5rem;
+    margin-block: 1.5rem;
     vertical-align: middle;
     text-align: center;
+    height: 5rem;
 }
 
 .table tbody td:first-child {
@@ -789,4 +786,139 @@ button {
 .create-animal-form .buttons a:hover,
 .create-animal-form .buttons button[type="submit"]:hover {
     transform: scale(1.05)
+}
+
+.animal-photo {
+    width: 3rem;
+    border-radius: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.animal-photo:active {
+    position: absolute;
+    transform: scale(10);
+    z-index: var(--z-fixed);
+
+}
+
+.animal-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animal-actions form {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-items: center;
+    margin-inline: .3rem;
+    overflow: hidden;
+}
+
+.animal-actions form button {
+    background: var(--shadow-color);
+    border-radius: .25rem;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all .3s ease;
+    opacity: 50%;
+
+}
+
+.animal-actions form .btn-excluir {
+    color: red;
+
+}
+
+.animal-actions form button:hover {
+    opacity: 1;
+}
+
+.notify {
+    position: fixed;
+    z-index: 999999;
+    top: 1rem;
+    right: 0;
+    width: 30rem;
+    height: 7.5rem;
+    display: flex;
+    box-shadow: 0 2px 14px var(--shadow-color);
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background: var(--shadow-color);
+    backdrop-filter: blur(70px);
+    border-top: 1px solid var(--shadow-color);
+    border-bottom: 1px solid var(--shadow-color);
+    border-left: 1px solid var(--shadow-color);
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    transition: all .5s ease;
+}
+
+.notify-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1rem;
+    padding-block: .5rem;
+    background: var(--shadow-color);
+}
+
+.notify-title {
+    width: 90%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.notify-title h1 {
+    font-size: var(--normal-font-size);
+    color: var(--first-color);
+    font-weight: var(--font-semi-bold);
+}
+
+.notify-title ion-icon {
+    color: var(--first-color);
+    font-size: large;
+
+}
+
+.notify-close {
+    display: grid;
+    place-content: center;
+    padding: .3rem;
+    font-size: 1.5rem;
+    transition: color .3s ease;
+    cursor: pointer;
+}
+
+.notify-close:hover {
+    color: red;
+}
+
+.notify-content {
+    height: 100%;
+    width: 100%;
+    padding-inline: 1rem;
+    overflow-y: scroll;
+    display: block;
+    text-align: justify;
+
+}
+
+.notify-content::-webkit-scrollbar {
+    width: .25rem;
+    background: var(--shadow-color);
+}
+
+.notify-content::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background: var(--title-color);
 }

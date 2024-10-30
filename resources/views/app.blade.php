@@ -24,6 +24,7 @@
     </main>
     <footer></footer>
     <script src="{{ asset('assets/js/nav.js') }}"></script>
+    <script src="{{ asset('assets/js/notify.js') }}"></script>
 
 </body>
 

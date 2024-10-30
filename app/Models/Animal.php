@@ -18,7 +18,8 @@ class Animal extends Model
         'nascimento',
         'prenhez',
         'mae_id',
-        'pai_id'
+        'pai_id',
+        'ativo'
     ];
 
     public function mae()
@@ -29,5 +30,11 @@ class Animal extends Model
     public function pai()
     {
         return $this->belongsTo(Animal::class, 'pai_id');
+    }
+    protected static function booted()
+    {
+        static::addGlobalScope('ativo', function ($query) {
+            $query->where('ativo', true);
+        });
     }
 }

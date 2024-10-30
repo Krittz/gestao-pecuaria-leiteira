@@ -7,15 +7,28 @@
 
 
 
-
 @if ($errors->any())
-<div>
-    <ul>
+<div class="notify">
+    <div class="notify-header">
+        <div class="notify-title">
+            <ion-icon name="notifications-outline"></ion-icon>
+            <h1>Notificação</h1>
+        </div>
+        <div class="notify-close">
+            <ion-icon name="close-outline"></ion-icon>
+        </div>
+    </div>
+    <div class="notify-content">
         @foreach ($errors->all() as $error)
-        <li>{{ $error }}</li>
+        <p>
+
+            {{$error}}
+
+        </p>
         @endforeach
-    </ul>
+    </div>
 </div>
+
 @endif
 
 <form action="{{ route('animals.store') }}" method="POST" enctype="multipart/form-data" class="create-animal-form">
@@ -80,6 +93,5 @@
 
 
 </form>
-
 
 @endsection

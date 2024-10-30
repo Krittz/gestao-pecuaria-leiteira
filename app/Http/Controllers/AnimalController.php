@@ -46,4 +46,10 @@ class AnimalController extends Controller
 
         return redirect()->route('animals.index')->with('success', 'Animal criado com sucesso.');
     }
+
+    public function destroy(Animal $animal)
+    {
+        $animal->update(['ativo' => false]);
+        return redirect()->route('animals.index')->with('success', 'Animal excluido com sucesso.');
+    }
 }

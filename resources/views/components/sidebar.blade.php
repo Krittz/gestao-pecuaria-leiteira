@@ -2,17 +2,17 @@
     <div class="sidebar-container">
         <div class="sidebar-user">
             <div class="sidebar-img">
-                <img src="https://via.placeholder.com/100" alt="User Image">
+                <img src="https://plus.unsplash.com/premium_vector-1727135180441-3065f557afd9?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="User Image">
             </div>
             <div class="sidebar-info">
-                <h3>Rix Methil</h3>
-                <span>rix123@email.com</span>
+                <h3>Cristian Alves</h3>
+                <span>contato@cran.com.br</span>
             </div>
         </div>
 
         <div class="sidebar-content">
             <div>
-                <h3 class="sidebar-title">MANAGE</h3>
+                <h3 class="sidebar-title">PAINEL</h3>
                 <div class="sidebar-list">
                     <a href="{{ route('home') }}" class="sidebar-link active-link">
                         <ion-icon name="pie-chart-outline"></ion-icon>
@@ -26,7 +26,7 @@
             </div>
 
             <div>
-                <h3 class="sidebar-title">SETTINGS</h3>
+                <h3 class="sidebar-title">AJUSTES</h3>
                 <div class="sidebar-list">
                     <a href="#" class="sidebar-link">
                         <ion-icon name="settings-outline"></ion-icon>
@@ -42,7 +42,7 @@
 
             <button class="sidebar-link">
                 <ion-icon name="power-outline" style="color: red;"></ion-icon>
-                <span>Log Out</span>
+                <span>SAIR</span>
             </button>
         </div>
     </div>
