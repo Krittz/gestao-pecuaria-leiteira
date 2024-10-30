@@ -7,11 +7,18 @@ use Illuminate\Http\Request;
 
 class AnimalController extends Controller
 {
-    public function index()
+
+    public function index(Request $request)
     {
-        $animals = Animal::all();
-        return view('animals.index', compact('animals'));
+        $search = $request->input('search');
+
+        $animals = Animal::when($search, function ($query, $search) {
+            return $query->where('nome', 'like', '%' . $search . '%');
+        })->get();
+
+        return view('animals.index', compact('animals', 'search'));
     }
+
 
     public function create()
     {

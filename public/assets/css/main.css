@@ -440,10 +440,12 @@ button {
     align-items: center;
     width: 20rem;
     height: 2.5rem;
-    background: var(--shadow-color);
-    border-radius: 1rem;
     margin-inline-end: 1.5rem;
     overflow: hidden;
+    background: var(--shadow-color);
+    border-radius: .5rem;
+
+
 }
 
 .section-header form input {
@@ -455,11 +457,18 @@ button {
     padding-inline: 1rem;
     font-size: 1em;
     color: var(--text-color);
+    position: relative;
+    
+}
+
+.section-header form:focus-within input{
+    border-bottom: 1px solid var(--first-color);
 }
 
 .section-header form button {
-    width: 4rem;
     background: var(--shadow-color);
+
+    width: 4rem;
     height: 100%;
     display: flex;
     align-items: center;

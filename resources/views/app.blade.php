@@ -14,10 +14,7 @@
         <div class="content">
             <div class="section-header">
                 <h1 class="section-title">@yield('section-title', 'Início')</h1>
-                <form action="#">
-                    <input type="search" name="search" id="search">
-                    <button type="submit"><ion-icon name="search-outline"></ion-icon></button>
-                </form>
+                @yield('search')
             </div>
             @yield('content')
         </div>

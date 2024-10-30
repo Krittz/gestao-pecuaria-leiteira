@@ -4,6 +4,7 @@
             <ion-icon name="code-slash-outline"></ion-icon>
             <span>Krittz</span>
         </a>
+        
         <button class="header-toggle" id="header-toggle">
             <span></span>
         </button>
