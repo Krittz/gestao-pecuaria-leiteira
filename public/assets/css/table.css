@@ -1,0 +1,141 @@
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-radius: .5rem;
+    border-spacing: 0 1rem !important;
+}
+
+.table th {
+    padding-block: 1rem;
+    color: white;
+    background: transparent;
+}
+
+.table thead tr {
+    background: transparent;
+    box-shadow: 0 1px 0 var(--first-color);
+
+}
+
+.table thead tr th {
+    position: relative;
+    padding-inline: 1rem;
+}
+
+.table thead tr th:not(:last-of-type):after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    top: 25%;
+    right: 0;
+    height: 50%;
+    background: var(--first-color);
+    opacity: 10%;
+}
+
+.table tbody tr {
+    margin-inline: 1rem;
+    background: var(--shadow-color);
+}
+
+
+.table tbody td {
+    margin-block: 1.5rem;
+    vertical-align: middle;
+    text-align: center;
+    height: 5rem;
+}
+
+.table tbody td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.table tbody td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+
+.table-action {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.table-action a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--first-color);
+    padding-block: .5rem;
+    padding-inline: 1rem;
+    background: var(--shadow-color);
+    border-radius: .5rem;
+    transition: all .3s ease;
+    column-gap: .5rem;
+    font-weight: var(--font-semi-bold);
+}
+
+.table-action a:hover {
+    color: #000;
+    background: var(--first-color);
+}
+
+.table-action a ion-icon {
+    font-size: 1.5rem;
+}
+
+.animal-photo {
+    width: 3rem;
+    border-radius: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.animal-photo:active {
+    position: absolute;
+    transform: scale(10);
+    z-index: var(--z-fixed);
+
+}
+
+.animal-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animal-actions form {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-items: center;
+    margin-inline: .3rem;
+    overflow: hidden;
+}
+
+.animal-actions form button {
+    background: var(--shadow-color);
+    border-radius: .25rem;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all .3s ease;
+    opacity: 50%;
+
+}
+
+.animal-actions form .btn-excluir {
+    color: red;
+
+}
+
+.animal-actions form button:hover {
+    opacity: 1;
+}
