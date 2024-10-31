@@ -45,7 +45,7 @@
     font-weight: var(--font-semi-bold);
 }
 
-.notify-title ion-icon {
+.notify-title i {
     color: var(--first-color);
     font-size: large;
 

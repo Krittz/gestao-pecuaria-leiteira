@@ -102,7 +102,7 @@
     transition: color .4s, opacity .4s;
 }
 
-.sidebar-link ion-icon {
+.sidebar-link i {
     font-size: 1.25rem;
 }
 

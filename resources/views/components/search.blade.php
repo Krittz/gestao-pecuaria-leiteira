@@ -5,6 +5,6 @@
         placeholder="@yield('search-placeholder', 'Pesquisar...')"
         value="{{ old('search', $search ?? '') }}">
     <button type="submit">
-        <ion-icon name="search-outline"></ion-icon>
+    <i class="ph ph-magnifying-glass"></i>
     </button>
 </form>

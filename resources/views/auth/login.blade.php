@@ -7,12 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krittz | Login</title>
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+    <link rel="icon" href="{{ asset('assets/img/favicon.ico') }}" type="image/x-icon">
 
     <!-- Icons -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <!-- // Icons -->
 </head>
 
@@ -21,11 +19,11 @@
     <div class="notify">
         <div class="notify-header">
             <div class="notify-title">
-                <ion-icon name="notifications-outline"></ion-icon>
+                <i class="ph ph-bell"></i>
                 <h1>Notificação</h1>
             </div>
             <div class="notify-close">
-                <ion-icon name="close-outline"></ion-icon>
+                <i class="ph ph-x-circle"></i>
             </div>
         </div>
         <div class="notify-content">
@@ -35,12 +33,10 @@
         </div>
     </div>
     @endif
+    <img src="{{ asset('assets/img/Logo-Cran.svg')}}" alt="Logo-CrAn" id="logo-cran">
+
     <div class="auth">
         <div class="auth-title">
-            <div class="title">
-                <ion-icon name="code-slash-outline"></ion-icon>
-                <h1>Krittz</h1>
-            </div>
             <span>Login</span>
         </div>
         <form action="{{ route('login') }}" method="POST">
@@ -54,7 +50,7 @@
             <div class="auth-group">
                 <label for="password">Senha</label>
                 <input type="password" name="password" id="password" required />
-                <ion-icon name="eye-off-outline" id="show-pass"></ion-icon>
+                <i class="ph ph-eye-slash" id="show-pass"></i>
             </div>
             <div class="auth-buttons">
                 <button type="submit">Entrar</button>

@@ -9,8 +9,6 @@
 }
 
 .auth-title {
-    top: 0;
-    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,19 +16,14 @@
     width: 100%;
 }
 
-.auth-title .title {
-    width: 100%;
-    padding: 2rem;
-    display: flex;
-    justify-content: end;
-    column-gap: .5rem;
-    align-items: center;
-    color: var(--title-color);
-}
-
-.auth-title .title ion-icon {
-    color: var(--first-color);
-    font-size: 2.5em;
+#logo-cran {
+    position: absolute;
+    width: 4rem;
+    align-items: start;
+    right: 2rem;
+    top: 2rem;
+    user-select: none;
+    pointer-events: none;
 }
 
 .auth-title span {
@@ -115,10 +108,11 @@
 
 }
 
-.auth form .auth-group ion-icon {
+.auth form .auth-group i {
     cursor: pointer;
     transition: all .3s ease;
     font-size: 1.5em;
+    color: var(--text-color);
 }
 
 .auth-buttons {

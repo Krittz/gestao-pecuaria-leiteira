@@ -13,11 +13,11 @@
 <div class="notify">
     <div class="notify-header">
         <div class="notify-title">
-            <ion-icon name="notifications-outline"></ion-icon>
+            <i class="ph ph-bell"></i>
             <h1>Notificação</h1>
         </div>
         <div class="notify-close">
-            <ion-icon name="close-outline"></ion-icon>
+            <i class="ph ph-x-circle"></i>
         </div>
     </div>
     <div class="notify-content">
@@ -29,7 +29,7 @@
 
 
 <div class="table-action">
-    <a href="{{ route('animals.create') }}"><ion-icon name="add-outline"></ion-icon> Novo Animal</a>
+    <a href="{{ route('animals.create') }}"><i class="ph ph-plus"></i> Novo Animal</a>
 </div>
 
 <table class="table">
@@ -69,14 +69,14 @@
                         @csrf
                         @method('PATCH')
                         <button type="submit" class="btn-editar">
-                            <ion-icon name="create-outline"></ion-icon>
+                        <i class="ph ph-pencil-simple"></i>
                         </button>
                     </form>
                     <form action="{{ route('animals.destroy', ['animal' => $animal->id]) }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn-excluir">
-                            <ion-icon name="trash-outline"></ion-icon>
+                        <i class="ph ph-trash-simple"></i>
                         </button>
                     </form>
                 </div>

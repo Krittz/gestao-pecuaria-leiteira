@@ -142,7 +142,7 @@
     background: var(--first-color);
 }
 
-.table-action a ion-icon {
+.table-action a i {
     font-size: 1.5rem;
 }
 

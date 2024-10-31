@@ -1,12 +1,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Krittz | @yield('title', 'Home')</title>
+<title>CrAn | @yield('title', 'Início')</title>
 <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
 
-
+<link rel="icon" href="{{ asset('assets/img/favicon.ico') }}" type="image/x-icon">
 <!-- Icons -->
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-<link href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css" rel="stylesheet" />
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
 <!-- // Icons -->

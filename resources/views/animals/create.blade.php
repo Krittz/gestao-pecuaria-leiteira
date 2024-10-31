@@ -9,11 +9,11 @@
 <div class="notify">
     <div class="notify-header">
         <div class="notify-title">
-            <ion-icon name="notifications-outline"></ion-icon>
+            <i class="ph ph-bell"></i>
             <h1>Notificação</h1>
         </div>
         <div class="notify-close">
-            <ion-icon name="close-outline"></ion-icon>
+            <i class="ph ph-x-circle"></i>
         </div>
     </div>
     <div class="notify-content">
@@ -38,7 +38,7 @@
     <div class="form-group file">
         <input type="file" name="imagem" id="imagem">
         <label for="imagem">
-            <ion-icon name="cloud-upload-outline"></ion-icon>
+            <i class="ph ph-cloud-arrow-up"></i>
             Carregar Imagem</label>
     </div>
 

@@ -76,7 +76,7 @@
     box-shadow: 0 2px 14px var(--shadow-color);
 }
 
-.form-group.file label ion-icon {
+.form-group.file label i{
     font-size: 5em;
 }
 

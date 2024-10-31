@@ -21,19 +21,14 @@
 }
 
 .header-logo {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    column-gap: .25rem;
+    justify-self: center;
 }
 
-.header-logo ion-icon {
-    font-size: 1.5rem;
-    color: var(--first-color);
-}
-
-.header-logo span {
-    color: var(--title-color);
-    font-weight: var(--font-semi-bold);
+.header-logo #logo-cran {
+    position: initial;
+    filter: drop-shadow(0 0 12px var(--shadow-color));
 }
 
 .header-toggle {
