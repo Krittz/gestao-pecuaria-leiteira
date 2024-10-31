@@ -1,4 +1,3 @@
-{{-- app.blade.php --}}
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -24,6 +23,7 @@
     <script src="{{ asset('assets/js/nav.js') }}"></script>
     <script src="{{ asset('assets/js/notify.js') }}"></script>
     <script src="{{ asset('assets/js/dropdown.js') }}"></script>
+    <script src="{{ asset('assets/js/table-img.js') }}"></script>
 </body>
 
 </html>

@@ -11,17 +11,29 @@ class AuthController extends Controller
 {
     public function register(Request $request)
     {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8',
-        ]);
+        $request->validate(
+            [
+                'name' => 'required|string|max:255',
+                'email' => 'required|string|email|max:255|unique:users',
+                'password' => [
+                    'required',
+                    'string',
+                    'min:8',
+                    'regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/'
+                ],
+            ],
+            [
+                'email.unique' => 'Email inválido! Não foi possível completar o cadastro. ',
+                'password.min' => 'A senha deve ter pelo menos 8 caracteres.',
+                'password.regex' => 'A senha deve conter pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial.',
+            ]
+        );
 
-        // Criação do usuário com a senha hasheada
+
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => Hash::make($request->password), // Aqui você já faz a hash
+            'password' => Hash::make($request->password),
         ]);
 
         Auth::login($user);

@@ -85,33 +85,8 @@
         @endforeach
     </tbody>
 </table>
-
-
-
 <div id="fullScreenImage" class="full-screen" style="display: none;">
     <span class="close" onclick="closeImage()">&times;</span>
     <img id="displayImage" src="" alt="Imagem Ampliada">
 </div>
-
-<script>
-    function showImage(src) {
-        const fullScreenImage = document.getElementById('fullScreenImage');
-        const displayImage = document.getElementById('displayImage');
-        displayImage.src = src; // Define a imagem a ser exibida
-        fullScreenImage.style.display = 'block'; // Exibe a imagem
-    }
-
-    function closeImage() {
-        const fullScreenImage = document.getElementById('fullScreenImage');
-        fullScreenImage.style.display = 'none'; // Esconde a imagem
-    }
-</script>
-
-
-<style>
-  
-</style>
-
 @endsection
-
-
