@@ -35,6 +35,7 @@
 <table class="table">
     <thead>
         <tr>
+            <th>Código</th>
             <th>Imagem</th>
             <th>Nome</th>
             <th>Sexo</th>
@@ -48,9 +49,10 @@
     <tbody>
         @foreach ($animals as $animal)
         <tr>
-            <td>
+            <td>{{ $animal->id }}</td>
+            <td class="table-img">
                 @if ($animal->imagem)
-                <img src="{{ asset('storage/' . $animal->imagem) }}" alt="{{ $animal->nome }}" width="100" class="animal-photo">
+                <img src="{{ asset('storage/' . $animal->imagem) }}" alt="{{ $animal->nome }}" class="animal-photo" onclick="showImage(this.src)">
                 @else
                 N/A
                 @endif
@@ -83,4 +85,33 @@
         @endforeach
     </tbody>
 </table>
+
+
+
+<div id="fullScreenImage" class="full-screen" style="display: none;">
+    <span class="close" onclick="closeImage()">&times;</span>
+    <img id="displayImage" src="" alt="Imagem Ampliada">
+</div>
+
+<script>
+    function showImage(src) {
+        const fullScreenImage = document.getElementById('fullScreenImage');
+        const displayImage = document.getElementById('displayImage');
+        displayImage.src = src; // Define a imagem a ser exibida
+        fullScreenImage.style.display = 'block'; // Exibe a imagem
+    }
+
+    function closeImage() {
+        const fullScreenImage = document.getElementById('fullScreenImage');
+        fullScreenImage.style.display = 'none'; // Esconde a imagem
+    }
+</script>
+
+
+<style>
+  
+</style>
+
 @endsection
+
+

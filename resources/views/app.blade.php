@@ -1,3 +1,4 @@
+{{-- app.blade.php --}}
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -7,7 +8,6 @@
 
 <body>
     @include('components.header')
-
     @include('components.sidebar')
 
     <main class="main container" id="main">
@@ -19,11 +19,11 @@
             @yield('content')
         </div>
     </main>
+
     <footer></footer>
     <script src="{{ asset('assets/js/nav.js') }}"></script>
     <script src="{{ asset('assets/js/notify.js') }}"></script>
     <script src="{{ asset('assets/js/dropdown.js') }}"></script>
-
 </body>
 
 </html>

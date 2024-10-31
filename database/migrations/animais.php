@@ -12,11 +12,12 @@ return new class extends Migration
         Schema::create('animais', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
-            $table->string('imagem')->nullable();  
+            $table->string('imagem')->nullable();
             $table->string('sexo');
             $table->date('nascimento');
             $table->boolean('prenhez')->default(false);
             $table->boolean('ativo')->default(true);
+            $table->foreignId('user_id')->constrained()->onDelete('cascade'); // Adicionando a coluna user_id
             $table->timestamps();
         });
     }

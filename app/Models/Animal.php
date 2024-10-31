@@ -17,20 +17,15 @@ class Animal extends Model
         'sexo',
         'nascimento',
         'prenhez',
-        'mae_id',
-        'pai_id',
-        'ativo'
+        'ativo',
+        'user_id',
     ];
 
-    public function mae()
+    public function user()
     {
-        return $this->belongsTo(Animal::class, 'mae_id');
+        return $this->belongsTo(User::class);
     }
 
-    public function pai()
-    {
-        return $this->belongsTo(Animal::class, 'pai_id');
-    }
     protected static function booted()
     {
         static::addGlobalScope('ativo', function ($query) {
