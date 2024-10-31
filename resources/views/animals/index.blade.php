@@ -26,12 +26,12 @@
 </div>
 @endif
 
-{{-- Ação para adicionar novo animal --}}
+
+
 <div class="table-action">
     <a href="{{ route('animals.create') }}"><ion-icon name="add-outline"></ion-icon> Novo Animal</a>
 </div>
 
-{{-- Tabela de Animais --}}
 <table class="table">
     <thead>
         <tr>

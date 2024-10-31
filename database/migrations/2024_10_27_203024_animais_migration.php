@@ -12,16 +12,12 @@ return new class extends Migration
         Schema::create('animais', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
-            $table->string('imagem')->nullable();  // Caminho da imagem
+            $table->string('imagem')->nullable();  
             $table->string('sexo');
             $table->date('nascimento');
             $table->boolean('prenhez')->default(false);
-            $table->unsignedBigInteger('mae_id')->nullable();
-            $table->unsignedBigInteger('pai_id')->nullable();
+            $table->boolean('ativo')->default(true);
             $table->timestamps();
-
-            $table->foreign('mae_id')->references('id')->on('animais')->onDelete('set null');
-            $table->foreign('pai_id')->references('id')->on('animais')->onDelete('set null');
         });
     }
 

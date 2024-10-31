@@ -33,8 +33,7 @@ class AnimalController extends Controller
             'sexo' => 'required|string|max:10',
             'nascimento' => 'required|date',
             'prenhez' => 'nullable|boolean',
-            'mae_id' => 'nullable|exists:animais,id',
-            'pai_id' => 'nullable|exists:animais,id',
+
         ]);
 
         $path = $request->file('imagem') ? $request->file('imagem')->store('imagens_animais', 'public') : null;
@@ -45,8 +44,7 @@ class AnimalController extends Controller
             'sexo' => $request->sexo,
             'nascimento' => $request->nascimento,
             'prenhez' => $request->prenhez ?? false,
-            'mae_id' => $request->mae_id,
-            'pai_id' => $request->pai_id,
+
         ]);
 
         $animal->save();
